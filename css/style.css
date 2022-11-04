@@ -1,710 +1,457 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Slabo+27px&display=swap');
-/* font-family: 'Dancing Script', cursive;
-font-family: 'Slabo 27px', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Slabo+27px&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.contenedortotal{
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 85% auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
-.header {
-grid-area: header;
-display: flex;
-justify-content: space-between;
-background: rgb(245,9,1);
-background: linear-gradient(90deg, rgba(245,9,1,1) 0%, rgba(121,9,9,1) 35%, rgba(0,6,8,1) 100%);
-height: 163px;
-width: 100%;
-font-family: "Courier New", Courier, monospace;
--webkit-animation: color-change-5x 2s linear infinite alternate both;
-	        animation: color-change-5x 2s linear infinite alternate both
-}
-@-webkit-keyframes color-change-5x {
-    0% {
-      background: #000a0b;
-    }
-    25% {
-      background: #fc1c03;
-    }
-    50% {
-      background: #ea2222;
-    }
-    75% {
-      background: #080600;
-    }
-    100% {
-      background: #020700;
-    }
-  }
-  @keyframes color-change-5x {
-    0% {
-      background: #fe0101;
-    }
-    25% {
-      background: #fb0101;
-    }
-    50% {
-      background: #090000;
-    }
-    75% {
-      background: #060000;
-    }
-    100% {
-      background: #d80d0d;
-    }
-  }
-  
+.contenedortotal {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 85% auto;
+  grid-template-areas: "header" "main" "footer"; }
+
 .main {
-grid-area: main;
-background-image: url(../assets/version\ grande.jpg);
-background-repeat: repeat;
-background-size: cover;
-background-position: center;
-min-height: 100vh;
-}
+  grid-area: main;
+  background-image: url(../scss/assets/img/version_grande.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; }
 
-.contenido p{
-height: 100vh;
-text-align: center;
-}
-.footer {
-width: 100%;
-height: 100px;
-background: rgb(8,0,0);
-background: linear-gradient(90deg, rgba(8,0,0,1) 0%, rgba(250,3,3,1) 40%, rgba(245,17,5,1) 60%, rgba(0,4,5,1) 100%);
-background-position: bottom;
--webkit-animation: color-change-5x 5s linear infinite alternate both;
-	        animation: color-change-5x 5s linear infinite alternate both
-}
+.navbar {
+  padding: 0; }
+  .navbar .navbar-nav .nav-link {
+    padding: 1em;
+    transition: all .5s;
+    font-size: 1.5em; }
+    .navbar .navbar-nav .nav-link:hover {
+      background-color: darkgoldenrod;
+      color: white; }
 
-@-webkit-keyframes color-change-5x {
-    0% {
-      background: #000a0b;
-    }
-    25% {
-      background: #fc1c03;
-    }
-    50% {
-      background: #ea2222;
-    }
-    75% {
-      background: #080600;
-    }
-    100% {
-      background: #020700;
-    }
-  }
-  @keyframes color-change-5x {
-    0% {
-      background: #fe0101;
-    }
-    25% {
-      background: #fb0101;
-    }
-    50% {
-      background: #090000;
-    }
-    75% {
-      background: #060000;
-    }
-    100% {
-      background: #d80d0d;
-    }
-  }
-  
-.barra-nav {
-list-style: none;
-padding: 0;
-background: #092327;
-width: 90%;
-max-width: 1000%;
-margin: auto;
-margin-right: 50px;
-margin-top: 105px;
-}
-.barra-nav li a {
-text-decoration: none;
-color: white;
-padding: 20px;
-display: block;
-margin-right: 20px;
-}
-.barra-nav li {
-display: inline-block;
-text-align: center;
-}
-header div{
-    height: auto;
-    width: 50%;
-}
+.imagen-total {
+  -webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-.logo-img {
-height: 140px;
-width: 180px;
-padding-left: 20px;
-padding-top: 20px;
-	-webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0; }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% 1400px;
+    opacity: 1; } }
 
-@keyframes slide-in-elliptic-top-fwd{0%{transform:translateY(-600px) rotateX(-30deg) scale(0);transform-origin:50% 100%;opacity:0}100%{transform:translateY(0) rotateX(0) scale(1);transform-origin:50% 1400px;opacity:1}}
+.h1-index {
+  font-size: 80px;
+  font-family: 'Slabo 27px', serif;
+  color: burlywood;
+  text-align: center;
+  margin-left: 600px; }
 
+.index-p {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+  color: bisque;
+  margin-left: 900px;
+  margin-top: 120px; }
 
-.barra.nav {
-text-align: right;
-}
-.barra-nav li a:hover {
-background-color: rgb(237, 130, 16);
-}
-.footer{
-    grid-area: footer;
-}
-.footer-container {
-width: 500px;
-height: 80px;
-position: relative;
-left: 40%;
-top: 25%;
-}
-.instagram-img {
-width: 50px;
-height: 50px;
-}
-.facebook-img {
-width: 50px;
-height: 50px;
-}
-.mercadolibre-img {
-width: 140px;
-height: 50px;
-}
-.contenido-empresa {
-height: 100vh;
-text-align: center;
-}
-.contenido-servicios {
-height: 100%;
-}
+.h1-empresa {
+  font-size: 80px;
+  font-family: 'Slabo 27px', serif;
+  color: burlywood;
+  text-align: center;
+  margin-left: 600px;
+  margin-top: 50px; }
 
-.contenido-servicios h1{
-    font-family: "Slabo 27px", serif;
-    font-size: 90px;
-    color: burlywood;
-    text-align: end;
-    padding: 20px;
-    -webkit-animation: tracking-in-contract 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-@-webkit-keyframes tracking-in-contract {
-    0% {
-      letter-spacing: 1em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      letter-spacing: normal;
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-contract {
-    0% {
-      letter-spacing: 1em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      letter-spacing: normal;
-      opacity: 1;
-    }
-  }
-  
-.contenido-servicios h3{
-    color: bisque;
-    font-size: 30px;
-    text-align: end;
-    margin-right: 25%;
-    font-family: "Dancing Script", cursive;
-}
-.contenido-servicios p{
-    color: bisque;
-    font-size: 30px;
-    width: 700px;
-    font-family: "Dancing Script", cursive;
-    margin-left: 900px;
+.p-empresa {
+  height: 800px;
+  width: 800px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  color: bisque;
+  margin-left: 750px;
+  margin-top: 120px; }
 
-}
-.contenido-servicios img{
-    width: 150px;
-    height: 150px;
-    position: relative;
-    left: 70%;
-    -webkit-animation: flip-vertical-right 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-vertical-right 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-@-webkit-keyframes flip-vertical-right {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(180deg);
-              transform: rotateY(180deg);
-    }
-  }
-  @keyframes flip-vertical-right {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(180deg);
-              transform: rotateY(180deg);
-    }
-  }
-  
-.contenido-presupuestos{
-height: 100vh;
-}
-.contenido-presupuestos h1{
+.titulo-servicios {
+  font-size: 80px;
+  font-family: 'Slabo 27px', serif;
+  color: burlywood;
+  text-align: end;
+  margin-right: 600px; }
+
+.contenido-presupuestos {
+  height: 100vh; }
+  .contenido-presupuestos h1 {
     font-size: 95px;
     font-family: "Slabo 27px", serif;
     color: burlywood;
     text-align: right;
-    padding: 30px;
-    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-    
-@-webkit-keyframes tracking-in-contract-bck {
-    0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px);
-              transform: translateZ(400px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-contract-bck {
-    0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px);
-              transform: translateZ(400px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  
+    padding: 40px; }
 
-.contenido{
-    width: 500px;
-    height: 900px;
-    position: relative;
-    left: 60%;
-    line-height: 90px;
-    top: 100px; 
-}
-.h1-index{
-font-size: 100px;
-font-family: "Slabo 27px", serif; 
-text-align: end;
-color: burlywood;
-position: relative;
-top: 50px;
--webkit-animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+.presupuesto {
+  color: bisque;
+  font-size: 30px;
+  width: 600px;
+  height: 500px;
+  font-family: "Dancing Script", cursive;
+  margin-left: 700px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  left: 10%;
+  margin-top: -600px;
+  line-height: 70px; }
+  .presupuesto ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
 
-}
-@-webkit-keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  
+.contacto {
+  font-size: 90px;
+  text-align: right;
+  color: burlywood;
+  font-family: "Slabo 27px", serif;
+  padding: 40px; }
 
-.contenido p{
+.formStyle {
+  height: auto;
+  width: 450px;
+  margin-top: -40px;
+  position: absolute;
+  right: 10%; }
+
+.formulario {
+  font-size: 40px;
+  color: bisque;
+  font-family: "Dancing Script"; }
+  .formulario input {
     text-align: center;
-    font-size: 60px;
+    font-size: 20px; }
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background: #080000;
+  background: linear-gradient(90deg, #080000 0%, #fa0303 40%, #f51105 60%, #000405 100%);
+  background-position: bottom;
+  -webkit-animation: color-change-5x 5s linear infinite alternate both;
+  animation: color-change-5x 5s linear infinite alternate both;
+  grid-area: footer; }
+
+@-webkit-keyframes color-change-5x {
+  0% {
+    background: #000a0b; }
+  25% {
+    background: #fc1c03; }
+  50% {
+    background: #ea2222; }
+  75% {
+    background: #080600; }
+  100% {
+    background: #020700; } }
+
+@keyframes color-change-5x {
+  0% {
+    background: #fe0101; }
+  25% {
+    background: #fb0101; }
+  50% {
+    background: #090000; }
+  75% {
+    background: #060000; }
+  100% {
+    background: #d80d0d; } }
+
+.footer-container {
+  width: 500px;
+  height: 80px;
+  position: relative;
+  left: 40%;
+  top: 25%; }
+
+.instagram-img, .facebook-img {
+  width: 50px;
+  height: 50px; }
+
+.mercadolibre-img {
+  width: 140px;
+  height: 50px; }
+
+@media (max-width: 1200px) {
+  .contenedortotal {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 85% auto;
+    grid-template-areas: "header" "main" "footer"; }
+  .h1-index {
+    font-size: 80px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: center;
+    margin-left: 600px; }
+  .index-p {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    font-size: 50px;
     font-family: "Dancing Script", cursive;
     color: bisque;
-}
-
-.h1-empresa{
-font-size: 95px;
-font-family:'Slabo 27px', serif; 
-text-align: right;
-color: burlywood;
-padding-right: 30px;
--webkit-animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-@-webkit-keyframes tracking-in-expand-fwd-top {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px) translateY(-500px);
-              transform: translateZ(-700px) translateY(-500px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand-fwd-top {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px) translateY(-500px);
-              transform: translateZ(-700px) translateY(-500px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
-    }
-  }
-  
-.contacto{
-    font-size: 90px;
-    text-align: right;
+    margin-left: 650px; }
+  .h1-empresa {
+    font-size: 75px;
+    font-family: 'Slabo 27px', serif;
     color: burlywood;
-    font-family: "Slabo 27px", serif;
-    padding: 20px;
-}
-.formStyle{
-    position: absolute;
-    right: 10%;
-}
-.formulario{
-    font-size: 40px;
-    color: bisque;
-    font-family: 'Dancing Script'
-}
-
-.formulario input{
     text-align: center;
-    font-size: 20px;
-}
-.presupuesto{
+    margin-left: 500px;
+    margin-top: 50px; }
+  .p-empresa {
+    height: 600px;
+    width: 600px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    color: bisque;
+    margin-left: 550px;
+    margin-top: 100px; }
+  .titulo-servicios {
+    font-size: 80px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: end;
+    margin-right: 350px; }
+  .contenido-presupuestos h1 {
+    font-size: 80px;
+    font-family: "Slabo 27px", serif;
+    color: burlywood;
+    text-align: right;
+    padding: 40px; }
+  .presupuesto {
     color: bisque;
     font-size: 30px;
     width: 600px;
     height: 500px;
     font-family: "Dancing Script", cursive;
-    margin-left: 700px;
+    margin-left: 420px;
     text-align: center;
     padding: 10px;
     position: relative;
     left: 10%;
     margin-top: -600px;
-    line-height: 90px;
-    word-spacing: 2px;
-    
-}
-.contenido-empresa p{
-    height: 400px;
-    width: 700px;
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    color: bisque;
-    padding: 20px;
-    position: relative;
-    left: 55%;
-    margin-top: 20px;
-}
-.contacto{
-    -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-@-webkit-keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-@media (max-width: 768px){
-
-  .contenedortotal{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 85% auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-  }
-.header{
-  display: flex;
-  position: relative;
-  align-items: space-around;
-  height: 290px;
-  width: 100%;
-  
-}
-.main {
-  grid-area: main;
-  background-image: url(../assets/version\ grande.jpg);
-  background-repeat:repeat;
-  background-size: cover;
-  background-position: right;
-  min-height: 100vh;
-  }
-  
-  .contenido{
-    width: 500px;
-    height: 900px;
-    position: relative;
-    left: 20%;
-    line-height: 60px;
-    top: 200px; 
-}
-
-.h1-index{
-  font-size: 70px;
-  font-family: "Slabo 27px", serif; 
-  text-align: center;
-  color: burlywood;
-  position: relative;
-  top: 80px;}
-
-  .contenido p{
-    
-    font-size: 40px;
-    
-  }
-  .contenedorlogo a{
-    width: auto;
-    height: auto;
-  }
-  .logo-img {
-    height: 140px;
-    width: 180px;
-    padding-left: 20px;
-    padding-top: 20px;
-    position: relative;
-    left: 100px;
-    bottom: -50px;
-    
-    
-  }
-  .barra-nav {
-    list-style: none;
-    padding: 0;
-    background: #092327;
-    width: 38%;
-    max-width: 1000%;
-    margin: auto;
-    margin-right: 50px;
-    margin-top: 0px;
-    flex-direction: column;
-  }
-  .h1-empresa{
-    font-size: 45px;
-    text-align: center;
-    margin-top: 50px;
-    
-  }
-  .contenido-empresa p{
-    height: 200px;
-    width: 350px;
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    color: bisque;
-    padding: 20px;
-    position: relative;
-    left: 25%;
-    margin-top: 20px;
-}
-}
-
-@media (max-width: 576px){
-  
-
-    .contenedortotal{
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 85% auto;
-      grid-template-areas: 
-      "header"
-      "main"
-      "footer"
-      ;
-    }
-  .header{
-    display: flex;
-    position: relative;
-    align-items: space-around;
-    height: 290px;
-    width: 100%;
-    
-  }
-  .main {
-    grid-area: main;
-    background-image: url(../assets/version\ grande.jpg);
-    background-repeat:repeat;
-    background-size: cover;
-    background-position: right;
-    min-height: 100vh;
-    }
-    
-    .contenido{
-      width: 500px;
-      height: 900px;
-      position: relative;
-      left: 5%;
-      line-height: 60px;
-      top: 200px; 
-  }
-  
-  .h1-index{
-    font-size: 70px;
-    font-family: "Slabo 27px", serif; 
+    line-height: 70px; }
+    .presupuesto ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+  .contacto {
+    font-size: 80px;
     text-align: center;
     color: burlywood;
+    font-family: "Slabo 27px", serif;
+    padding: 40px;
+    margin-left: 500px; }
+  .formStyle {
+    height: auto;
+    width: 450px;
+    margin-top: -40px;
+    position: absolute;
+    right: 10%; }
+  .formulario {
+    font-size: 40px;
+    color: bisque;
+    font-family: "Dancing Script"; }
+    .formulario input {
+      text-align: center;
+      font-size: 20px; } }
+
+@media (max-width: 768px) {
+  .contenedortotal {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 85% auto;
+    grid-template-areas: "header" "main" "footer"; }
+  .h1-index {
+    font-size: 70px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: left;
+    margin-left: 300px; }
+  .index-p {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Dancing Script", cursive;
+    color: bisque;
+    margin-left: 300px;
+    margin-top: 100px; }
+  .h1-empresa {
+    font-size: 60px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 50px; }
+  .p-empresa {
+    height: 600px;
+    width: 600px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    color: bisque;
+    margin-left: 100px;
+    margin-top: 100px; }
+  .titulo-servicios {
+    font-size: 80px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: end;
+    margin-right: 200px; }
+  .contenido-presupuestos h1 {
+    font-size: 60px;
+    font-family: "Slabo 27px", serif;
+    color: burlywood;
+    text-align: left;
+    padding: 40px;
+    margin-left: 200px; }
+  .presupuesto {
+    color: bisque;
+    font-size: 30px;
+    width: 600px;
+    height: 500px;
+    font-family: "Dancing Script", cursive;
+    margin-left: 50px;
+    text-align: center;
+    padding: 10px;
     position: relative;
-    top: 80px;}
-  
-    .contenido p{
-      
-      font-size: 40px;
-      
-    }
-    .contenedorlogo a{
-      width: auto;
-      height: auto;
-    }
-    .logo-img {
-      height: 140px;
-      width: 180px;
-      padding-left: 20px;
-      padding-top: 20px;
-      position: relative;
-      left: 100px;
-      bottom: -50px;
-      
-      
-    }
-    .barra-nav {
-      list-style: none;
-      padding: 0;
-      background: #092327;
-      width: 50%;
-      max-width: 1000%;
-      margin: auto;
-      margin-right: 50px;
-      margin-top: 0px;
-      flex-direction: column;
-    }
-    .h1-empresa{
-      font-size: 40px;
+    left: 10%;
+    margin-top: -600px;
+    line-height: 70px; }
+    .presupuesto ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+  .contacto {
+    font-size: 60px;
+    text-align: left;
+    color: burlywood;
+    font-family: "Slabo 27px", serif;
+    padding: 40px;
+    margin-left: 200px; }
+  .formStyle {
+    height: auto;
+    width: 450px;
+    margin-top: -40px;
+    position: absolute;
+    right: 10%; }
+  .formulario {
+    font-size: 40px;
+    color: bisque;
+    font-family: "Dancing Script"; }
+    .formulario input {
       text-align: center;
-      margin-top: 50px;
-      
-    }
-    .contenido-empresa p{
-      height: 200px;
-      width: 350px;
-      font-size: 30px;
+      font-size: 20px; } }
+
+@media (max-width: 576px) {
+  .contenedortotal {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 85% auto;
+    grid-template-areas: "header" "main" "footer"; }
+  .h1-index {
+    font-size: 50px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: left;
+    margin-left: 300px; }
+  .index-p {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Dancing Script", cursive;
+    color: bisque;
+    margin-left: 100px;
+    margin-top: 100px; }
+  .h1-empresa {
+    font-size: 50px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px; }
+  .p-empresa {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    color: bisque;
+    margin-left: 50px;
+    margin-top: 100px; }
+  .titulo-servicios {
+    font-size: 50px;
+    font-family: 'Slabo 27px', serif;
+    color: burlywood;
+    text-align: column;
+    margin-right: 200px; }
+  .contenido-presupuestos h1 {
+    font-size: 50px;
+    font-family: "Slabo 27px", serif;
+    color: burlywood;
+    text-align: left;
+    padding: 40px;
+    margin-left: 100px; }
+  .presupuesto {
+    color: bisque;
+    font-size: 25px;
+    width: 600px;
+    height: 500px;
+    font-family: "Dancing Script", cursive;
+    margin-left: -50px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    left: 10%;
+    margin-top: -600px;
+    line-height: 70px; }
+    .presupuesto ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+  .contacto {
+    font-size: 60px;
+    text-align: left;
+    color: burlywood;
+    font-family: "Slabo 27px", serif;
+    padding: 40px;
+    margin-left: 250px; }
+  .formStyle {
+    height: auto;
+    width: 450px;
+    margin-top: -40px;
+    position: absolute;
+    right: 10%; }
+  .formulario {
+    font-size: 40px;
+    color: bisque;
+    font-family: "Dancing Script"; }
+    .formulario input {
       text-align: center;
-      font-family: 'Dancing Script', cursive;
-      color: bisque;
-      padding: 15px;
-      position: relative;
-      left: 20%;
-      margin-top: 20px;
-  }
-  }
-
-
-
-
-
+      font-size: 20px; } }

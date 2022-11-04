@@ -6,79 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../assets/png sin fondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../scss/assets/img/png sin fondo.png" type="image/x-icon">
     <title>Pizzarreros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="contenedortotal">
         <header class="header">
-            <div class="contenedorlogo">
-                <a href="../index.html"> <img src="../assets/img/png sin fondo.png" alt="" class="logo-img"></a>
-            </div>
-            <div>
-                <nav>
-                    <ul class="barra-nav">
-                        <li> <a href="../index.html">Inicio</a></li>
-                        <li> <a href="./empresa.html">Empresa</a></li>
-                        <li> <a href="./servicios.html">Servicios</a></li>
-                        <li> <a href="./presupuestos.html">Presupuestos</a></li>
-                        <li> <a href="./contacto.html">Contacto</a></li>
-                    </ul>
+            <nav class="navbar navbar-expand-lg " style="background-color: rgba(211,51,61,255)">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img src="../scss/assets/img/png sin fondo.png"
+                            class="imagen-total" alt="" width="180px" height="140px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav m-auto mb-2 mb-lg-0"">
+                            <li class=" nav-item">
+                            <a class="nav-link active" aria-current="page" href="./empresa.html">Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./presupuestos.html">Presupuestos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 </nav>
-            </div>
         </header>
         <main class="main">
-            <div>
-                <section class="contenido-servicios">
-                    <h1>
-                        Nuestros servicios</h1>
-                    <div>
-                        <article>
-                            <h3>Pizzas</h3>
-                            <img src="../assets/img/pizzas.jpg" alt="">
-                            <p> Nuestras pizzas vienen con salsa y mozzarella. Los gustos que continuación vamos a
+            <h1 class="titulo-servicios">Servicios</h1>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card border-dark mb-4 mx-auto mt-3" style="width: 18rem;">
+                        <img src="../scss/assets/img/pizzas.jpg" class="card-img-top" alt="pizza">
+                        <div class="card-body h-100">
+                            <h5 class="card-title">Pizzas</h5>
+                            <p class="card-text">Nuestras pizzas vienen con salsa y mozzarella. Los gustos que continuación
+                                vamos a
                                 detallar estan todos incluidos: 4 quesos, cheddar, aceitunas verdes, morrones verdes,
                                 amarillos y rojos, cebolla caramelizada, choclo, tomates cherry y albahaca, jamon,
                                 pepperoni, panceta, palmitos, ananá y hongos.</p>
-                        </article>
-                        <article>
-                            <h3>Calzones</h3>
-                            <img src="../assets/img/calzone.jpg" alt="">
-                            <p>Nuestros calzones vienen rellenos de: jamón y queso, capresse, cebolla y queso, panceta
-                                queso y cheddar.</p>
-
-                        </article>
-                        <article>
-                            <h3>Chivitos</h3>
-                            <img src="../assets/img/chivito.jpg" alt="">
-                            <p>Nuestros chivitos cuentan con jamón, mozzarella, lechuga, tomate, carne bovina, pollo o
-                                cerdo ( a elección del cliente), diferentes salsas y pan casero.</p>
-
-                        </article>
-                        <article>
-                            <h3>Hamburguesas</h3>
-                            <img src="../assets/img/hamburguesa.jpg" alt="">
-                            <p>Nuestras hamburguesas cuentan con pan casero, hamburguesa de carne de 120 gramos,
-                                cheddar, panceta, huevos, diferentes salsas, lechuga y tomate.</p>
-
-                        </article>
+                        </div>
                     </div>
-                </section>
+                </div>
+                <div class="col">
+                    <div class="card border-dark mb-4 mx-auto mt-3" style="width: 18rem;">
+                        <img src="../scss/assets/img/calzone.jpg" class="card-img-top" alt="calzones">
+                        <div class="card-body h-100">
+                            <h5 class="card-title">Calzones</h5>
+                            <p class="card-text">Nuestros calzones vienen rellenos de: jamón y queso, capresse, cebolla y queso,
+                                panceta
+                                queso y cheddar.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="card border-dark mb-4 mx-auto" style="width: 18rem;">
+                        <img src="../scss/assets/img/chivito.jpg" class="card-img-top" alt="chivitos">
+                        <div class="card-body h-100">
+                            <h5 class="card-title">Chivitos</h5>
+                            <p class="card-text">Nuestros chivitos cuentan con jamón, mozzarella, lechuga, tomate, carne bovina,
+                                pollo o
+                                cerdo ( a elección del cliente), diferentes salsas y pan casero.</p>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="col">
+                    <div class="card border-dark mb-4 mx-auto" style="width: 18rem;">
+                        <img src="../scss/assets/img/hamburguesa.jpg" class="card-img-top" alt="hamburguesa">
+                        <div class="card-body h-100">
+                            <h5 class="card-title">Hamburguesas</h5>
+                            <p class="card-text">Nuestras hamburguesas cuentan con pan casero, hamburguesa de carne de 120
+                                gramos,
+                                cheddar, panceta, huevos, diferentes salsas, lechuga y tomate.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
         <footer class="footer">
             <div class="footer-container">
-                <a href="https://www.instagram.com/pizzarrerosmontevideo/"> <img src="../assets/img/instagram.png"
-                        alt="" class="instagram-img"></a>
-                <a href="https://www.facebook.com/profile.php?id=100072907729064"> <img src="../assets/img/facebook.png"
-                        alt="" class="facebook-img"></a>
+                <a href="https://www.instagram.com/pizzarrerosmontevideo/"> <img src="../scss/assets/img/instagram.png"
+                        alt="instagram" class="instagram-img"></a>
+                <a href="https://www.facebook.com/profile.php?id=100072907729064"> <img src="../scss/assets/img/facebook.png"
+                        alt="facebook" class="facebook-img"></a>
                 <a href="https://www.mercadolibre.com.uy/publicaciones/listado#menu-user"> <img
-                        src="../assets/img/mercado-libre-logo.png" alt="" class="mercadolibre-img"></a>
+                        src="../scss/assets/img/mercado-libre-logo.png" alt="mercadolibre" class="mercadolibre-img"></a>
             </div>
         </footer>
     </div>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </html>
