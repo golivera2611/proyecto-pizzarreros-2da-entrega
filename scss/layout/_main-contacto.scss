@@ -1,0 +1,26 @@
+.contacto {
+    font-size: 90px;
+    text-align: right;
+    color: $colorH1;
+    font-family: "Slabo 27px", serif;
+    padding: 40px;
+}
+
+    .formStyle {
+    height: auto;
+    width: 450px;
+    margin-top: -40px;
+    position: absolute;
+    right: 10%;
+}
+
+    .formulario {
+    font-size: 40px;
+    color: $colorTexto;
+    font-family: "Dancing Script";
+
+    input {
+        text-align: center;
+        font-size: 20px;
+    }
+}

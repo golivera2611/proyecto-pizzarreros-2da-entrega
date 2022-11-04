@@ -1,0 +1,32 @@
+.contenido-presupuestos {
+    height: 100vh;
+
+    h1 {
+        font-size: 95px;
+        font-family: "Slabo 27px", serif;
+        color: $colorH1;
+        text-align: right;
+        padding: 40px;
+    }
+}
+
+    .presupuesto {
+    color: $colorTexto;
+    font-size: 30px;
+    width: 600px;
+    height: 500px;
+    font-family: "Dancing Script", cursive;
+    margin-left: 700px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    left: 10%;
+    margin-top: -600px;
+    line-height: 70px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
